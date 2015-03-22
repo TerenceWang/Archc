@@ -21,8 +21,105 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="lab1.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_test_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="alu_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="clk_div_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ctrl_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ctrl_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ctrl_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ctrl_test_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1427028541" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1427028540">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1427038233" xil_pn:in_ck="-7181934631150236435" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1427038233">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU-test.v"/>
+      <outfile xil_pn:name="BTN_Anti_jitter.v"/>
+      <outfile xil_pn:name="Counter_3channel.v"/>
+      <outfile xil_pn:name="MIO_BUS.v"/>
+      <outfile xil_pn:name="Muliti_cycle_Cpu.v"/>
+      <outfile xil_pn:name="MultiCycleCPU_Design_Top.v"/>
+      <outfile xil_pn:name="Regs.v"/>
+      <outfile xil_pn:name="alu.v"/>
+      <outfile xil_pn:name="clk_div.v"/>
+      <outfile xil_pn:name="ctrl-test.v"/>
+      <outfile xil_pn:name="data_path.v"/>
+      <outfile xil_pn:name="led_Dev_IO.v"/>
+      <outfile xil_pn:name="mux2to1_32.v"/>
+      <outfile xil_pn:name="mux4to1_32.v"/>
+      <outfile xil_pn:name="mux4to1_5.v"/>
+      <outfile xil_pn:name="seven_seg_Dev_IO.v"/>
+      <outfile xil_pn:name="seven_seg_dev.v"/>
+      <outfile xil_pn:name="try_ctrl.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1427036044" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4488755410128245643" xil_pn:start_ts="1427036044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1427036044" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1214410547119119867" xil_pn:start_ts="1427036044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1427028541" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7875161007943056830" xil_pn:start_ts="1427028541">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1427038233" xil_pn:in_ck="-7181934631150236435" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1427038233">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU-test.v"/>
+      <outfile xil_pn:name="BTN_Anti_jitter.v"/>
+      <outfile xil_pn:name="Counter_3channel.v"/>
+      <outfile xil_pn:name="MIO_BUS.v"/>
+      <outfile xil_pn:name="Muliti_cycle_Cpu.v"/>
+      <outfile xil_pn:name="MultiCycleCPU_Design_Top.v"/>
+      <outfile xil_pn:name="Regs.v"/>
+      <outfile xil_pn:name="alu.v"/>
+      <outfile xil_pn:name="clk_div.v"/>
+      <outfile xil_pn:name="ctrl-test.v"/>
+      <outfile xil_pn:name="data_path.v"/>
+      <outfile xil_pn:name="led_Dev_IO.v"/>
+      <outfile xil_pn:name="mux2to1_32.v"/>
+      <outfile xil_pn:name="mux4to1_32.v"/>
+      <outfile xil_pn:name="mux4to1_5.v"/>
+      <outfile xil_pn:name="seven_seg_Dev_IO.v"/>
+      <outfile xil_pn:name="seven_seg_dev.v"/>
+      <outfile xil_pn:name="try_ctrl.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1427038237" xil_pn:in_ck="-7181934631150236435" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-991423413585797512" xil_pn:start_ts="1427038233">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ctrl_test_beh.prj"/>
+      <outfile xil_pn:name="ctrl_test_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1427038237" xil_pn:in_ck="4560693218058979855" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8697535266073001952" xil_pn:start_ts="1427038237">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ctrl_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>

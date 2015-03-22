@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-03-22T19:32:10</DateModified>
+  <DateModified>2015-03-22T20:19:54</DateModified>
   <ModuleName>Top_Muliti_IOBUS</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>X:/lab/lab1/iseconfig/Top_Muliti_IOBUS.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>X:/lab/lab1\</ImplementationReportsDirectory>
+  <SavedFilePath>X:/Archc/lab1/iseconfig/Top_Muliti_IOBUS.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>X:/Archc/lab1\</ImplementationReportsDirectory>
   <DateInitialized>2015-03-22T17:24:38</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
