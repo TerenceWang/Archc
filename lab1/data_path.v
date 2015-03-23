@@ -2,6 +2,7 @@ module  data_path   (
                     clk,
                     reset,
                     MIO_ready,
+						  switch,
                     IorD,
                     IRWrite,
                     RegDst,
@@ -20,7 +21,8 @@ module  data_path   (
                     data_out,
                     M_addr,
                     zero,
-                    overflow
+                    overflow,
+						  regs
                     );
 
     input clk, reset;
@@ -28,8 +30,11 @@ module  data_path   (
     input [1:0] RegDst, MemtoReg, ALUSrcB, PCSource;
     input [2:0] ALU_operation;
     input [31:0] data2CPU;
+	 input [4:0] switch;
     output [31:0] Inst_R, M_addr, data_out, PC_Current; //
     output zero, overflow;
+	 output [31:0] regs;
+	 reg [15:0]temp;
     reg [31:0] Inst_R, ALU_Out, MDR, PC_Current;
     wire [1:0] RegDst, MemtoReg, ALUSrcB, PCSource;
     wire [31:0] reg_outA, reg_outB, r6out; //regs
@@ -45,6 +50,7 @@ module  data_path   (
     assign rst=reset;
     // locked inst form memory
     always @(posedge clk or posedge rst) begin
+		 
         if ( rst ) begin
             Inst_R <= 0;
         end
@@ -71,13 +77,15 @@ module  data_path   (
     Regs           reg_files(
                             .clk(clk),
                             .rst(rst),
+									 .switch(switch),
                             .reg_R_addr_A(reg_Rs_addr_A),
                             .reg_R_addr_B(reg_Rt_addr_B),
                             .reg_W_addr(reg_Wt_addr),
                             .wdata(w_reg_data),
                             .reg_we(RegWrite),
                             .rdata_A(rdata_A),
-                            .rdata_B(rdata_B)
+                            .rdata_B(rdata_B),
+									 .regs(regs)
                             );
 
 //path with MUX++++++++++++++++++++++++++++++++++++++++++++++++++++++

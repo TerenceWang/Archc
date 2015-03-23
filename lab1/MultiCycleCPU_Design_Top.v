@@ -4,13 +4,21 @@ module Top_Muliti_IOBUS(
                         BTN,
                         // I/O:
                         SW,
+								switch,
                         LED,
                         SEGMENT,
-                        AN_SEL
+                        AN_SEL,
+								LCDRS, 
+								LCDRW, 
+								LCDE, 
+								LCDDAT
                         );
     input clk_50mhz;
     input  [ 4: 0] BTN;
     input  [ 7: 0] SW;
+	 input [4:0] switch;
+	 output LCDRS,	LCDRW,LCDE;
+	 output [3:0]  LCDDAT;
     output [ 7: 0] LED, SEGMENT;
     output [ 3: 0] AN_SEL;
     wire Clk_CPU, rst, clk_m, mem_w, data_ram_we, GPIOf0000000_we, GPIOe0000000_we, counter_we;
@@ -24,20 +32,35 @@ module Top_Muliti_IOBUS(
     wire   [21: 0] GPIOf0;
     wire   [31: 0] pc, Inst, addr_bus, Cpu_data2bus, ram_data_out, disp_num;
     wire   [31: 0] clkdiv, Cpu_data4bus, counter_out, ram_data_in, Peripheral_in;
+	 wire   [255:0] strdata;
+	 reg    [255:0] strdatas;
     wire MIO_ready;
     wire CPU_MIO;
-
-
+	 wire [7:0]type,code,stage;
+	 wire [31:0]regs;
+	 /*assign strdata[255:224]= Inst;
+	 assign strdata[223:216]=8'b0;
+	 assign strdata[215:200]={6'b0,ram_addr};
+	 assign strdata[199:192]=8'b0;
+	 assign strdata[191:176]={6'b0,rom_addr};
+	 assign strdata[175:]*/
+	 Convert C0(.clk(clk_50mhz),
+					.Inst(Inst),
+					.ram_addr(ram_addr[7:0]),
+					.rom_addr(rom_addr[7:0]),
+					.state(state[3:0]), 
+					.type(type),.code(code),.stage(stage),
+					.pc(pc[7:0]),.regs(regs[31:16]),
+					.strdata(strdata));
     assign MIO_ready = ~button_out[1];
     assign rst = button_out[3];
-
+	 
     assign SW2 = SW_OK[2];
     assign LED = {led_out[7]|Clk_CPU,led_out[6:0]};
     assign clk_m = ~clk_50mhz;
     assign rom_addr = pc[11:2];
     assign AN_SEL = digit_anode;
     assign clk_io = ~Clk_CPU;
-
     seven_seg_dev      seven_seg(
                                 .disp_num(disp_num),
                                 .clk(clk_50mhz),
@@ -47,7 +70,13 @@ module Top_Muliti_IOBUS(
                                 .SEGMENT(SEGMENT),
                                 .AN(digit_anode)
                                 );
-
+	 lcdtest lcd(.CCLK(clk_50mhz), 
+					 .BTN2(rst),
+					 .strdatas(strdata), 
+					 .LCDRS(LCDRS), 
+					 .LCDRW(LCDRW), 
+					 .LCDE(LCDE), 
+					 .LCDDAT(LCDDAT));
     BTN_Anti_jitter     BTN_OK(
                                 clk_50mhz,
                                 BTN,
@@ -69,6 +98,7 @@ module Top_Muliti_IOBUS(
                                 .clk(Clk_CPU),
                                 .reset(rst),
                                 .MIO_ready(MIO_ready), //MIO_ready
+										  .switch(switch),
                                 // Internal signals:
                                 .pc_out(pc), //Test
                                 .Inst(Inst), //Test
@@ -77,7 +107,11 @@ module Top_Muliti_IOBUS(
                                 .data_out(Cpu_data2bus),
                                 .data_in(Cpu_data4bus),
                                 .CPU_MIO(CPU_MIO),
-                                .state(state) //Test
+                                .state(state), //Test
+										  .type(type),
+										  .code(code),
+										  .stage(stage),
+										  .regs(regs)
                                 );
 
     Mem_B               RAM_I_D(
@@ -161,3 +195,5 @@ module Top_Muliti_IOBUS(
                                 );
 
 endmodule
+
+

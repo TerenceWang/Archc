@@ -21,7 +21,9 @@ module            ctrl(
                             PCSource,
                             PCWrite,
                             PCWriteCond,
-                            Beq
+                            Beq,
+									 type,
+									 code
                             );
     input clk, reset;
     input zero, overflow, MIO_ready;
@@ -30,13 +32,16 @@ module            ctrl(
     output CPU_MIO, MemRead, MemWrite, IorD, IRWrite, RegWrite, ALUSrcA, PCWrite, PCWriteCond, Beq;
     output [ 4: 0] state_out;
     output [ 1: 0] RegDst, MemtoReg, ALUSrcB, PCSource;
+	 output [ 7: 0] type,code;
     wire   [ 4: 0] state_out;
     wire   reset, MIO_ready;
     reg    CPU_MIO, MemRead, MemWrite, IorD, IRWrite, RegWrite, ALUSrcA, PCWrite, PCWriteCond, Beq;
     reg       [ 1: 0] RegDst, MemtoReg, ALUSrcB, PCSource;
     reg    [2:0] ALU_operation;
     reg       [4:0] state;
-
+	reg[7:0] types,codes;
+	assign type=types;
+	assign code=codes;
     parameter  IF     = 5'b00000,
 					ID		 = 5'b00001,
                EX_R   = 5'b00010,
@@ -92,20 +97,21 @@ module            ctrl(
                 ID : begin
                     case ( Inst_in[31:26] )
                         6'b000000 : begin //R-type OP
+									types="R";
                             `CPU_ctrl_signals <= 17'h00010;
                             state <= EX_R;
                             case ( Inst_in[5:0] )
-                                6'b100000 : ALU_operation <= ADD;
+                                6'b100000 : begin ALU_operation <= ADD;codes="3";end
                                 //6'b10_0001 addu
-                                6'b100010 : ALU_operation <= SUB;
+                                6'b100010 : begin ALU_operation <= SUB;codes="4";end
                                 // 6'b10_0011 subu
-                                6'b100100 : ALU_operation <= AND;
-                                6'b100101 : ALU_operation <= OR;
-                                6'b100110 : ALU_operation <= XOR;
-                                6'b100111 : ALU_operation <= NOR;
-                                6'b101010 : ALU_operation <= SLT;
+                                6'b100100 : begin ALU_operation <= AND;codes="5";end
+                                6'b100101 : begin ALU_operation <= OR;codes= "6";end
+                                6'b100110 : begin ALU_operation <= XOR;codes="7";end
+                                6'b100111 : begin ALU_operation <= NOR;codes="8";end
+                                6'b101010 : begin ALU_operation <= SLT;codes="9";end
                                 // 6'b101011 sltu
-                                6'b000010 : ALU_operation <= SRL;   //shfit 1bit right
+                                6'b000010 : begin ALU_operation <= SRL; codes="A";end  //shfit 1bit right
                                 // 6'b000000 : ALU_operation <= XOR;   // something wrong, 6'b0 should be sll?
                                 6'b001000 :  begin
                                     `CPU_ctrl_signals <= 17'h10010;
@@ -121,26 +127,31 @@ module            ctrl(
                             endcase
                         end
                         6'b100011 : begin                       // Lw
+									 types="I";codes="1";
                             `CPU_ctrl_signals <= 17'h00050;
                             ALU_operation <= ADD;
                             state <= EX_Mem;
                         end
                         6'b101011 : begin                       // Sw
+									types="I";codes="2";
                             `CPU_ctrl_signals <= 17'h00050;
                             ALU_operation <= ADD;
                             state <= EX_Mem;
                         end
                         6'b000010 : begin                       // Jump
+									types="J";codes="B";
                             `CPU_ctrl_signals <= 17'h10160;
                             state <= Exe_J;
                         end
                         6'b000100 : begin                       // Beq
+									types="I";codes="C";
                             `CPU_ctrl_signals <= 17'h08090;
                             Beq <= 1;
                             ALU_operation <= SUB;
                             state <= EX_beq;
                         end
                         6'b000101 : begin                       // Bne
+									types="I";codes="D";
                             `CPU_ctrl_signals <= 17'h08090;
                             Beq <= 0;
                             ALU_operation <= SUB;
@@ -148,36 +159,43 @@ module            ctrl(
                         end
                         6'b000011 : begin                       // Jal
                             `CPU_ctrl_signals <= 17'h1076c;
+									 types="I";codes="E";
                             state <= EX_JAL;
                         end
                         6'b001000 : begin                       // Addi
                             `CPU_ctrl_signals <= 17'h00050;
+									 types="I";codes="F";
                             ALU_operation <= ADD;
                             state <= EX_I;
                         end
                         // 6'b00_1001 addiu
                         6'b001010 : begin                       // Slti
                             `CPU_ctrl_signals <= 17'h00050;
+									 types="I";codes="G";
                             ALU_operation <= SLT;
                             state <= EX_I;
                         end
                         // 6'b00_1011 sltiu
                         6'b00_1100 : begin                      // andi
                             `CPU_ctrl_signals <= 17'h00050;
+									 types="I";codes="H";
                             ALU_operation <= AND;
                             state <= EX_I;
                         end
                         6'b00_1101 : begin                      // ori
                             `CPU_ctrl_signals <= 17'h00050;
+									 types="I";codes="I";
                             ALU_operation <= OR;
                             state <= EX_I;
                         end
                         6'b00_1110 : begin                      // xori
                             `CPU_ctrl_signals <= 17'h00050;
+									 types="I";codes="J";
                             ALU_operation <= XOR;
                             state <= EX_I;
                         end
                         6'b001111 : begin                       // Lui
+									types="I";codes="K";
                             `CPU_ctrl_signals <= 17'h00468;
                             state <= Lui_WB;
                         end
