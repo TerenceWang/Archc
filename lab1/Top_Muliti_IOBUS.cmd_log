@@ -31,3 +31,4 @@ xst -intstyle ise -ifn "X:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "X:/Archc/lab1/
 xst -intstyle ise -ifn "X:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "X:/Archc/lab1/Top_Muliti_IOBUS.syr" 
 xst -intstyle ise -ifn "X:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "X:/Archc/lab1/Top_Muliti_IOBUS.syr" 
 xst -intstyle ise -ifn "X:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "X:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+xst -intstyle ise -ifn "X:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "X:/Archc/lab1/Top_Muliti_IOBUS.syr" 

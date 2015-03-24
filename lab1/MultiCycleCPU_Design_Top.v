@@ -5,6 +5,7 @@ module Top_Muliti_IOBUS(
                         // I/O:
                         SW,
 								switch,
+								button,
                         LED,
                         SEGMENT,
                         AN_SEL,
@@ -17,6 +18,7 @@ module Top_Muliti_IOBUS(
     input  [ 4: 0] BTN;
     input  [ 7: 0] SW;
 	 input [4:0] switch;
+	 input button;
 	 output LCDRS,	LCDRW,LCDE;
 	 output [3:0]  LCDDAT;
     output [ 7: 0] LED, SEGMENT;
@@ -34,24 +36,36 @@ module Top_Muliti_IOBUS(
     wire   [31: 0] clkdiv, Cpu_data4bus, counter_out, ram_data_in, Peripheral_in;
 	 wire   [255:0] strdata;
 	 reg    [255:0] strdatas;
+	 reg cnt;
     wire MIO_ready;
     wire CPU_MIO;
 	 wire [7:0]type,code,stage;
 	 wire [31:0]regs;
+	 initial begin
+		cnt=0;
+	end
 	 /*assign strdata[255:224]= Inst;
 	 assign strdata[223:216]=8'b0;
 	 assign strdata[215:200]={6'b0,ram_addr};
 	 assign strdata[199:192]=8'b0;
 	 assign strdata[191:176]={6'b0,rom_addr};
 	 assign strdata[175:]*/
+	 wire [15:0]outs;
+	 h_l_select S0(.cnt(cnt), .regs(regs),.out(outs)
+    );
 	 Convert C0(.clk(clk_50mhz),
 					.Inst(Inst),
 					.ram_addr(ram_addr[7:0]),
 					.rom_addr(rom_addr[7:0]),
 					.state(state[3:0]), 
 					.type(type),.code(code),.stage(stage),
-					.pc(pc[7:0]),.regs(regs[31:16]),
+					.pc(pc[7:0]),.regs(outs),
 					.strdata(strdata));
+	always@(posedge button)
+		begin
+			cnt=cnt+1;
+		end
+	
     assign MIO_ready = ~button_out[1];
     assign rst = button_out[3];
 	 

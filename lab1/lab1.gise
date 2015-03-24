@@ -131,6 +131,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
@@ -146,6 +147,7 @@
     <transform xil_pn:end_ts="1427038237" xil_pn:in_ck="4560693218058979855" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8697535266073001952" xil_pn:start_ts="1427038237">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -183,7 +185,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1427127105" xil_pn:in_ck="-7985516844798742621" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="345175738425306974" xil_pn:start_ts="1427127056">
+    <transform xil_pn:end_ts="1427162622" xil_pn:in_ck="-9091717077440849383" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="345175738425306974" xil_pn:start_ts="1427162570">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

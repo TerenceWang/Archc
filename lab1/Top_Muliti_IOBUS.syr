@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Top_Muliti_IOBUS.prj
 
@@ -139,8 +139,10 @@ Module <clock> compiled
 Module <pbdebounce> compiled
 Compiling verilog file "ipcore_dir/Mem_B.v" in library work
 Module <lcd> compiled
-Compiling verilog file "Counter_3channel.v" in library work
+Compiling verilog file "h_l_select.v" in library work
 Module <Mem_B> compiled
+Compiling verilog file "Counter_3channel.v" in library work
+Module <h_l_select> compiled
 Compiling verilog file "Convert.v" in library work
 Module <Counter_x> compiled
 Compiling verilog file "clk_div.v" in library work
@@ -158,6 +160,8 @@ Analysis of file <"Top_Muliti_IOBUS.prj"> succeeded.
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for module <Top_Muliti_IOBUS> in library <work>.
+
+Analyzing hierarchy for module <h_l_select> in library <work>.
 
 Analyzing hierarchy for module <Convert> in library <work>.
 
@@ -235,8 +239,11 @@ Analyzing hierarchy for module <mux2to1_32> in library <work>.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <Top_Muliti_IOBUS>.
-WARNING:Xst:2211 - "ipcore_dir/Mem_B.v" line 117: Instantiating black box module <Mem_B>.
+WARNING:Xst:2211 - "ipcore_dir/Mem_B.v" line 131: Instantiating black box module <Mem_B>.
 Module <Top_Muliti_IOBUS> is correct for synthesis.
+ 
+Analyzing module <h_l_select> in library <work>.
+Module <h_l_select> is correct for synthesis.
  
 Analyzing module <Convert> in library <work>.
 Module <Convert> is correct for synthesis.
@@ -344,6 +351,11 @@ INFO:Xst:2679 - Register <strdata<7>> in unit <lcdtest> has a constant value of 
 INFO:Xst:2679 - Register <rwlcd> in unit <lcd> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <homelcd> in unit <genlcd> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <i> in unit <Regs> has a constant value of 100000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <h_l_select>.
+    Related source file is "h_l_select.v".
+Unit <h_l_select> synthesized.
+
 
 Synthesizing Unit <Convert>.
     Related source file is "Convert.v".
@@ -947,7 +959,6 @@ Synthesizing Unit <Top_Muliti_IOBUS>.
 WARNING:Xst:1780 - Signal <strdatas> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <state<4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <rom_addr<9:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <regs<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ram_addr<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clkdiv<31:20>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clkdiv<17:11>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -955,6 +966,9 @@ WARNING:Xst:646 - Signal <clkdiv<8:0>> is assigned but never used. This unconnec
 WARNING:Xst:1780 - Signal <blinke> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <GPIOf0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <CPU_MIO> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found T flip-flop for signal <cnt>.
+    Summary:
+	inferred   1 T-type flip-flop(s).
 Unit <Top_Muliti_IOBUS> synthesized.
 
 
@@ -985,6 +999,8 @@ Macro Statistics
  41-bit register                                       : 1
  5-bit register                                        : 1
  8-bit register                                        : 5
+# Toggle Registers                                     : 1
+ T flip-flop                                           : 1
 # Comparators                                          : 10
  32-bit comparator greatequal                          : 2
  32-bit comparator greater                             : 1
@@ -1165,8 +1181,8 @@ Macro Statistics
  8-bit adder                                           : 2
 # Counters                                             : 3
  32-bit up counter                                     : 3
-# Registers                                            : 1632
- Flip-Flops                                            : 1632
+# Registers                                            : 1633
+ Flip-Flops                                            : 1633
 # Comparators                                          : 10
  32-bit comparator greatequal                          : 2
  32-bit comparator greater                             : 1
@@ -1313,9 +1329,9 @@ WARNING:Xst:2677 - Node <MC_cpu/x_ctrl/CPU_MIO> of sequential type is unconnecte
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Top_Muliti_IOBUS, actual ratio is 252.
+Found area constraint ratio of 100 (+ 5) on block Top_Muliti_IOBUS, actual ratio is 256.
 Optimizing block <Top_Muliti_IOBUS> to meet ratio 100 (+ 5) of 960 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <Top_Muliti_IOBUS>, final ratio is 246.
+WARNING:Xst:2254 - Area constraint could not be met for block <Top_Muliti_IOBUS>, final ratio is 249.
 FlipFlop Device_led/LED_6 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop Device_led/LED_5 has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop Device_led/LED_4 has been replicated 1 time(s) to handle iob=true attribute.
@@ -1330,8 +1346,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1683
- Flip-Flops                                            : 1683
+# Registers                                            : 1684
+ Flip-Flops                                            : 1684
 
 =========================================================================
 
@@ -1357,30 +1373,30 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 46
+# IOs                              : 47
 
 Cell Usage :
-# BELS                             : 6172
+# BELS                             : 6300
 #      GND                         : 2
 #      INV                         : 176
 #      LUT1                        : 142
-#      LUT2                        : 283
+#      LUT2                        : 287
 #      LUT2_D                      : 13
 #      LUT2_L                      : 6
-#      LUT3                        : 1782
+#      LUT3                        : 1846
 #      LUT3_D                      : 35
 #      LUT3_L                      : 19
 #      LUT4                        : 1269
 #      LUT4_D                      : 55
 #      LUT4_L                      : 63
 #      MUXCY                       : 431
-#      MUXF5                       : 1025
-#      MUXF6                       : 336
-#      MUXF7                       : 136
-#      MUXF8                       : 68
+#      MUXF5                       : 1057
+#      MUXF6                       : 352
+#      MUXF7                       : 144
+#      MUXF8                       : 72
 #      VCC                         : 2
 #      XORCY                       : 329
-# FlipFlops/Latches                : 1683
+# FlipFlops/Latches                : 1684
 #      FD                          : 82
 #      FDC                         : 154
 #      FDC_1                       : 16
@@ -1390,16 +1406,16 @@ Cell Usage :
 #      FDP                         : 6
 #      FDP_1                       : 16
 #      FDPE_1                      : 7
-#      FDR                         : 45
+#      FDR                         : 46
 #      FDRE                        : 35
 #      FDRS                        : 3
 #      FDRSE                       : 3
 #      FDS                         : 10
 # RAMS                             : 1
 #      RAMB16_S36_S36              : 1
-# Clock Buffers                    : 5
+# Clock Buffers                    : 6
 #      BUFG                        : 4
-#      BUFGP                       : 1
+#      BUFGP                       : 2
 # IO Buffers                       : 45
 #      IBUF                        : 18
 #      OBUF                        : 27
@@ -1410,14 +1426,14 @@ Device utilization summary:
 
 Selected Device : xa3s100evqg100-4 
 
- Number of Slices:                     2443  out of    960   254% (*) 
- Number of Slice Flip Flops:           1676  out of   1920    87%  
- Number of 4 input LUTs:               3843  out of   1920   200% (*) 
- Number of IOs:                          46
- Number of bonded IOBs:                  46  out of     66    69%  
+ Number of Slices:                     2476  out of    960   257% (*) 
+ Number of Slice Flip Flops:           1677  out of   1920    87%  
+ Number of 4 input LUTs:               3911  out of   1920   203% (*) 
+ Number of IOs:                          47
+ Number of bonded IOBs:                  47  out of     66    71%  
     IOB Flip Flops:                       7
  Number of BRAMs:                         1  out of      4    25%  
- Number of GCLKs:                         5  out of     24    20%  
+ Number of GCLKs:                         6  out of     24    25%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
@@ -1449,6 +1465,7 @@ div_clk/clkdiv_101                 | BUFG                                       
 div_clk/clkdiv_91                  | BUFG                                                                                                                            | 35    |
 clk_io1(clk_io1:O)                 | BUFG(*)(Counter_xx/M1)                                                                                                          | 154   |
 Clk_CPU1(div_clk/Clk_CPU1:O)       | BUFG(*)(MC_cpu/x_ctrl/state_FSM_FFd2)                                                                                           | 1169  |
+button                             | BUFGP                                                                                                                           | 1     |
 -----------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1727,8 +1744,29 @@ Delay:               20.280ns (Levels of Logic = 24)
                                        (60.3% logic, 39.7% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'button'
+  Clock period: 2.135ns (frequency: 468.384MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.135ns (Levels of Logic = 0)
+  Source:            cnt_0 (FF)
+  Destination:       cnt_0 (FF)
+  Source Clock:      button rising
+  Destination Clock: button rising
+
+  Data Path: cnt_0 to cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.591   0.633  cnt_0 (cnt_0)
+     FDR:R                     0.911          cnt_0
+    ----------------------------------------
+    Total                      2.135ns (1.502ns logic, 0.633ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50mhz'
-  Total number of paths / destination ports: 554 / 50
+  Total number of paths / destination ports: 678 / 50
 -------------------------------------------------------------------------
 Offset:              6.819ns (Levels of Logic = 4)
   Source:            BTN<2> (PAD)
@@ -1800,13 +1838,13 @@ Offset:              9.029ns (Levels of Logic = 6)
 
 
 Total REAL time to Xst completion: 46.00 secs
-Total CPU time to Xst completion: 45.80 secs
+Total CPU time to Xst completion: 46.35 secs
  
 --> 
 
-Total memory usage is 389472 kilobytes
+Total memory usage is 389536 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  216 (   0 filtered)
+Number of warnings :  215 (   0 filtered)
 Number of infos    :   12 (   0 filtered)
 
