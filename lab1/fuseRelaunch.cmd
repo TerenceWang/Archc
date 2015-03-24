@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "X:/Archc/lab1/ctrl_test_isim_beh.exe" -prj "X:/Archc/lab1/ctrl_test_beh.prj" "work.ctrl_test" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/Archc/lab1/ALU_test_isim_beh.exe" -prj "E:/Archc/lab1/ALU_test_beh.prj" "work.ALU_test" "work.glbl" 

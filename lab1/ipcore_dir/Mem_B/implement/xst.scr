@@ -1,7 +1,7 @@
 run
 -ifmt VHDL
 -ent Mem_B_top
--p xa3s100e-vqg100-4
+-p xc3s500e-fg320-4
 -ifn xst.prj
 -write_timing_constraints No
 -iobuf YES

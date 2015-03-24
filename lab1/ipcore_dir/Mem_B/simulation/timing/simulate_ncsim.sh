@@ -46,6 +46,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 set work work
 #--------------------------------------------------------------------------------
+cp ../../../Mem_B.mif .
 mkdir work
 
 

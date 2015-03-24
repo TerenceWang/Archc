@@ -1,0 +1,8 @@
+Release 13.4 Drc O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Tue Mar 24 20:14:49 2015
+
+drc -z Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf
+
+DRC detected 0 errors and 0 warnings.

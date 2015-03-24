@@ -1,6 +1,7 @@
 # Output products list for <Mem_B>
 Mem_B.asy
 Mem_B.gise
+Mem_B.mif
 Mem_B.ngc
 Mem_B.sym
 Mem_B.v

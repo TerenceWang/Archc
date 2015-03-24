@@ -23,22 +23,22 @@ Generating metadata file...
 Generating ISE project...
 XCO file found: Mem_B.xco
 XMDF file found: Mem_B_xmdf.tcl
-Adding X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.asy -view all -origin_type
+Adding E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.asy -view all -origin_type
 imported
-Adding X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.ngc -view all -origin_type created
-Checking file "X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.ngc" for project device
+Adding E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.ngc -view all -origin_type created
+Checking file "E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.ngc" for project device
 match ...
-File "X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.ngc" device information matches
+File "E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.ngc" device information matches
 project device.
-Adding X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.sym -view all -origin_type
+Adding E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.sym -view all -origin_type
 imported
-Adding X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.v -view all -origin_type created
+Adding E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.v -view all -origin_type created
 INFO:HDLCompiler:1845 - Analyzing Verilog file
-   "X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.v" into library work
+   "E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.v" into library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
-Adding X:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.veo -view all -origin_type
+Adding E:/Archc/lab1/ipcore_dir/tmp/_cg/Mem_B.veo -view all -origin_type
 imported
-Adding X:/Archc/lab1/ipcore_dir/tmp/_cg/blk_mem_gen_v6_3_readme.txt -view all
+Adding E:/Archc/lab1/ipcore_dir/tmp/_cg/blk_mem_gen_v6_3_readme.txt -view all
 -origin_type imported
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.

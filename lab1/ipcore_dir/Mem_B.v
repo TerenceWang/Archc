@@ -80,11 +80,11 @@ output [31 : 0] douta;
     .C_HAS_RSTB(0),
     .C_HAS_SOFTECC_INPUT_REGS_A(0),
     .C_HAS_SOFTECC_OUTPUT_REGS_B(0),
-    .C_INIT_FILE_NAME("no_coe_file_loaded"),
+    .C_INIT_FILE_NAME("Mem_B.mif"),
     .C_INITA_VAL("0"),
     .C_INITB_VAL("0"),
     .C_INTERFACE_TYPE(0),
-    .C_LOAD_INIT_FILE(0),
+    .C_LOAD_INIT_FILE(1),
     .C_MEM_TYPE(0),
     .C_MUX_PIPELINE_STAGES(0),
     .C_PRIM_TYPE(1),
@@ -111,7 +111,7 @@ output [31 : 0] douta;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(32),
     .C_WRITE_WIDTH_B(32),
-    .C_XDEVICEFAMILY("aspartan3e")
+    .C_XDEVICEFAMILY("spartan3e")
   )
   inst (
     .CLKA(clka),

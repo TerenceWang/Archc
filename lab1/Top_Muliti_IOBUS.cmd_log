@@ -51,3 +51,43 @@ ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xa3s500e-cpg1
 map -intstyle ise -p xa3s500e-cpg132-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
 par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_Muliti_IOBUS.twx Top_Muliti_IOBUS.ncd -o Top_Muliti_IOBUS.twr Top_Muliti_IOBUS.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xa3s500e-cpg132-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xa3s500e-cpg132-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_Muliti_IOBUS.twx Top_Muliti_IOBUS.ncd -o Top_Muliti_IOBUS.twr Top_Muliti_IOBUS.pcf -ucf ucf.ucf 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_Muliti_IOBUS.twx Top_Muliti_IOBUS.ncd -o Top_Muliti_IOBUS.twr Top_Muliti_IOBUS.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f Top_Muliti_IOBUS.ut Top_Muliti_IOBUS.ncd 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_Muliti_IOBUS.twx Top_Muliti_IOBUS.ncd -o Top_Muliti_IOBUS.twr Top_Muliti_IOBUS.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f Top_Muliti_IOBUS.ut Top_Muliti_IOBUS.ncd 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_Muliti_IOBUS.twx Top_Muliti_IOBUS.ncd -o Top_Muliti_IOBUS.twr Top_Muliti_IOBUS.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f Top_Muliti_IOBUS.ut Top_Muliti_IOBUS.ncd 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ngd Top_Muliti_IOBUS.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Muliti_IOBUS_map.ncd Top_Muliti_IOBUS.ncd Top_Muliti_IOBUS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_Muliti_IOBUS.twx Top_Muliti_IOBUS.ncd -o Top_Muliti_IOBUS.twr Top_Muliti_IOBUS.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f Top_Muliti_IOBUS.ut Top_Muliti_IOBUS.ncd 
+xst -intstyle ise -ifn "E:/Archc/lab1/Top_Muliti_IOBUS.xst" -ofn "E:/Archc/lab1/Top_Muliti_IOBUS.syr" 

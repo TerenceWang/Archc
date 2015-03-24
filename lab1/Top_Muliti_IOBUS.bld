@@ -2,16 +2,21 @@ Release 13.4 ngdbuild O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
--intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xa3s500e-cpg132-4
-Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p
+xc3s500e-fg320-4 Top_Muliti_IOBUS.ngc Top_Muliti_IOBUS.ngd
 
-Reading NGO file "X:/Archc/lab1/Top_Muliti_IOBUS.ngc" ...
+Reading NGO file "E:/Archc/lab1/Top_Muliti_IOBUS.ngc" ...
 Loading design module "ipcore_dir/Mem_B.ngc"...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "ucf.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
+INFO:ConstraintSystem - The Period constraint <NET  "clk_50mhz"		PERIOD = 20.0ns
+   HIGH 40%;> [ucf.ucf(6)], is specified using the Net Period method which is
+   not recommended. Please use the Timespec PERIOD method.
+
 Done...
 
 Checking expanded design ...
@@ -27,7 +32,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 165836 kilobytes
+Total memory usage is 163636 kilobytes
 
 Writing NGD file "Top_Muliti_IOBUS.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec

@@ -36,6 +36,7 @@ module Top_Muliti_IOBUS(
     wire CPU_MIO;
 	 wire [7:0]type,code,stage;
 	 wire [31:0]regs;
+	 assign Clk_CPU=BTN[2];
 	 initial begin
 		cnt=0;
 	end
@@ -89,8 +90,7 @@ module Top_Muliti_IOBUS(
                                 clk_50mhz,
                                 rst,
                                 SW2,
-                                clkdiv,
-                                Clk_CPU
+                                clkdiv
                                 ); // Clock divider-
 
 //++++++++++++++++++++++muliti_cycle_cpu+++++++++++++++++++++++++++++++++++++++++++
@@ -98,7 +98,7 @@ module Top_Muliti_IOBUS(
                                 .clk(Clk_CPU),
                                 .reset(rst),
                                 .MIO_ready(MIO_ready), //MIO_ready
-										  .switch(switch),
+										  .switch({cnt,switch[3:0]}),
                                 // Internal signals:
                                 .pc_out(pc), //Test
                                 .Inst(Inst), //Test

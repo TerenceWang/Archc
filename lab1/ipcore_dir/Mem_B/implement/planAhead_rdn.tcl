@@ -45,7 +45,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 
 
-set device xa3s100evqg100-4
+set device xc3s500efg320-4
 set projName Mem_B
 set design Mem_B
 set projDir [file dirname [info script]]

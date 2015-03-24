@@ -23,7 +23,7 @@ copy ..\example_design\Mem_B_top.ucf results\
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xa3s100e-vqg100-4 Mem_B_top
+ngdbuild -p xc3s500e-fg320-4 Mem_B_top
 
 echo 'Running map'
 map Mem_B_top -o mapped.ncd -pr i
