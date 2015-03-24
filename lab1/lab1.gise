@@ -24,17 +24,45 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_test_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_test_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Top_Muliti_IOBUS.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Top_Muliti_IOBUS.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Top_Muliti_IOBUS.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Top_Muliti_IOBUS.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Top_Muliti_IOBUS.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="Top_Muliti_IOBUS.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Top_Muliti_IOBUS.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="Top_Muliti_IOBUS.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="Top_Muliti_IOBUS.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="Top_Muliti_IOBUS.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Top_Muliti_IOBUS.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="Top_Muliti_IOBUS.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Top_Muliti_IOBUS.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Top_Muliti_IOBUS.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="Top_Muliti_IOBUS.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="Top_Muliti_IOBUS.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="Top_Muliti_IOBUS.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="Top_Muliti_IOBUS.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Top_Muliti_IOBUS.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Top_Muliti_IOBUS_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="Top_Muliti_IOBUS_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Top_Muliti_IOBUS_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Top_Muliti_IOBUS_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Top_Muliti_IOBUS_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="Top_Muliti_IOBUS_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Top_Muliti_IOBUS_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Top_Muliti_IOBUS_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="Top_Muliti_IOBUS_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="Top_Muliti_IOBUS_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Top_Muliti_IOBUS_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Top_Muliti_IOBUS_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Top_Muliti_IOBUS_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Top_Muliti_IOBUS_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Top_Muliti_IOBUS_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="alu_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu_stx_beh.prj"/>
@@ -50,6 +78,7 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
@@ -97,6 +126,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
@@ -163,7 +193,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1427124296" xil_pn:in_ck="-5112015658702183673" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7875161007943056830" xil_pn:start_ts="1427124296">
+    <transform xil_pn:end_ts="1427164659" xil_pn:in_ck="-5112015658702183673" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1412054977636806451" xil_pn:start_ts="1427164659">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/Mem_B.ngc"/>
@@ -177,18 +207,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1427121595" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8278333461601115334" xil_pn:start_ts="1427121595">
+    <transform xil_pn:end_ts="1427164659" xil_pn:in_ck="-2675820073786089898" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3865647962561411643" xil_pn:start_ts="1427164659">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1427121595" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8370636294365286584" xil_pn:start_ts="1427121595">
+    <transform xil_pn:end_ts="1427164659" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3613001749038014653" xil_pn:start_ts="1427164659">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1427162622" xil_pn:in_ck="-9091717077440849383" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="345175738425306974" xil_pn:start_ts="1427162570">
+    <transform xil_pn:end_ts="1427164709" xil_pn:in_ck="-9091717077440849383" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6417494524078749299" xil_pn:start_ts="1427164659">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Top_Muliti_IOBUS.lso"/>
       <outfile xil_pn:name="Top_Muliti_IOBUS.ngc"/>
       <outfile xil_pn:name="Top_Muliti_IOBUS.ngr"/>
@@ -200,6 +232,54 @@
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1427162799" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-6322945744895056599" xil_pn:start_ts="1427162799">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1427164715" xil_pn:in_ck="100687901608575394" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6183521532178008221" xil_pn:start_ts="1427164709">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.bld"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.ngd"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1427164724" xil_pn:in_ck="2197561915789852718" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-4960444349933801833" xil_pn:start_ts="1427164715">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.pcf"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_map.map"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_map.mrp"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_map.ncd"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_map.ngm"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_map.xrpt"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_summary.xml"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1427165006" xil_pn:in_ck="-2731252107024140729" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="4911417832838480196" xil_pn:start_ts="1427164724">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.ncd"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.pad"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.par"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.ptwx"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.unroutes"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.xpi"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_pad.csv"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_pad.txt"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1427165006" xil_pn:in_ck="2197561915789852586" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1427164999">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.twr"/>
+      <outfile xil_pn:name="Top_Muliti_IOBUS.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 

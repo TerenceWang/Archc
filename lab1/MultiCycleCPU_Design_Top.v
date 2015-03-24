@@ -6,9 +6,6 @@ module Top_Muliti_IOBUS(
                         SW,
 								switch,
 								button,
-                        LED,
-                        SEGMENT,
-                        AN_SEL,
 								LCDRS, 
 								LCDRW, 
 								LCDE, 
@@ -18,11 +15,9 @@ module Top_Muliti_IOBUS(
     input  [ 4: 0] BTN;
     input  [ 7: 0] SW;
 	 input [4:0] switch;
-	 input button;
+	 input button; 
 	 output LCDRS,	LCDRW,LCDE;
 	 output [3:0]  LCDDAT;
-    output [ 7: 0] LED, SEGMENT;
-    output [ 3: 0] AN_SEL;
     wire Clk_CPU, rst, clk_m, mem_w, data_ram_we, GPIOf0000000_we, GPIOe0000000_we, counter_we;
     wire counter_OUT0, counter_OUT1, counter_OUT2;
     wire   [ 1: 0] Counter_set;
@@ -75,15 +70,6 @@ module Top_Muliti_IOBUS(
     assign rom_addr = pc[11:2];
     assign AN_SEL = digit_anode;
     assign clk_io = ~Clk_CPU;
-    seven_seg_dev      seven_seg(
-                                .disp_num(disp_num),
-                                .clk(clk_50mhz),
-                                .clr(rst),
-                                .SW(SW_OK[1:0]),
-                                .Scanning(clkdiv[19:18]),
-                                .SEGMENT(SEGMENT),
-                                .AN(digit_anode)
-                                );
 	 lcdtest lcd(.CCLK(clk_50mhz), 
 					 .BTN2(rst),
 					 .strdatas(strdata), 
@@ -176,7 +162,7 @@ module Top_Muliti_IOBUS(
                                 );
 
 /* GPIO out use on 7-seg display & CPU state display addre=e0000000-efffffff */
-    seven_seg_Dev_IO    Device_7seg(
+   /* seven_seg_Dev_IO    Device_7seg(
                                 .clk(clk_io),
                                 .rst(rst),
                                 .GPIOe0000000_we(GPIOe0000000_we),
@@ -191,7 +177,7 @@ module Top_Muliti_IOBUS(
                                 .Test_data6(pc),
                                 //pc;
                                 .disp_num(disp_num)
-                                );
+                                );*/
 
     Counter_x           Counter_xx(
                                 .clk(clk_io),
